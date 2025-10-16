@@ -1,0 +1,13 @@
+[
+    {
+        "Exemplo":"Este é outro exemplo JSONde ",
+        "Passos":22,
+        "Carro":"Mazda",
+        "Modelo":"Subprime",
+        "Especificações":[
+            {"Luz":"verde"},
+            {"Preço":144.234},
+            {"Ano":2020}
+        ]
+    }
+]
