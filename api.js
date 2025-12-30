@@ -8,7 +8,7 @@ const arreyresponse = [
     {"filme":"O Mundo do ser","Ano":2025}
 ]
 
-/*const dados = [
+const dados = [
     {
         "Exemplo":"Este é outro exemplo JSON de ",
         "Passos":22,
@@ -20,7 +20,7 @@ const arreyresponse = [
             {"Ano":2020}
         ]
     }
-]*/
+]
 app.get("/", (req, res) => {
     res.json(dados);
 });
