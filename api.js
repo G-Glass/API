@@ -1,6 +1,5 @@
 //API
 import express from "express";
-import cors from 'cors';
 
 const app = express();
 const PORT = 3008;
@@ -9,9 +8,9 @@ const arreyresponse = [
     {"filme":"O Mundo do ser","Ano":2025}
 ]
 
-const dados = [
+/*const dados = [
     {
-        "Exemplo":"Este é outro exemplo JSONde ",
+        "Exemplo":"Este é outro exemplo JSON de ",
         "Passos":22,
         "Carro":"Mazda",
         "Modelo":"Subprime",
@@ -21,7 +20,7 @@ const dados = [
             {"Ano":2020}
         ]
     }
-]
+]*/
 app.get("/", (req, res) => {
     res.json(dados);
 });
