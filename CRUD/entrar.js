@@ -22,5 +22,13 @@ const conectDB = async() => {
 }
 conectDB();
 
+app.post('/login', async (req, res) => {
+    try {
+        
+    } catch (erro) {
+        res.json({error:erro})
+    }
+})
+
 app.listen(PORT, () => console.log(`Iniciando no servidor ${PORT}`))
 
