@@ -20,7 +20,7 @@ const connectDB = async () => {
 }
 connectDB();
 
-app.post('/signUp', async (req, res) => {
+app.post('/SignUp', async (req, res) => {
     try {
         const novousuario = await SignUp.create(req.body)
         res.json({novousuario})
@@ -29,4 +29,13 @@ app.post('/signUp', async (req, res) => {
     }
 })
 
-app.listen(PORT, () => console.log(`Conectado na porta ${PORT}`))
+app.get('/SignUp', async (req, res) => {
+    try {
+        const usuarios = await SignUp.find();
+        res.json({usuarios});
+    }catch (error) {
+        res.json(console.log(`O programa deu erro,tente novamente`));
+    };
+});
+
+app.listen(PORT, () => console.log(`Conectado na porta ${PORT}`));

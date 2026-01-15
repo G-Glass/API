@@ -22,12 +22,13 @@ const conectDB = async() => {
 }
 conectDB();
 
-app.post('/login', async (req, res) => {
-    try {
-        
-    } catch (erro) {
-        res.json({error:erro})
-    }
+app.post('/signUp', async (req, res) => {
+        try {
+                const usuarios = await SignUp.find();
+                res.json({usuarios});
+        } catch (error) {
+            res.json({error:error});
+        };
 })
 
 app.listen(PORT, () => console.log(`Iniciando no servidor ${PORT}`))
