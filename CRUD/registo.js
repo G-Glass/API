@@ -20,16 +20,16 @@ const connectDB = async () => {
 }
 connectDB();
 
-app.post('/SignUp', async (req, res) => {
+app.post('/signUp', async (req, res) => {
     try {
         const novousuario = await SignUp.create(req.body)
         res.json({novousuario})
     } catch (erro) {
-        res.json({error:erro})
+        res.json({error:error})
     }
 })
 
-app.get('/SignUp', async (req, res) => {
+app.get('/signUp', async (req, res) => {
     try {
         const usuarios = await SignUp.find();
         res.json({usuarios});
